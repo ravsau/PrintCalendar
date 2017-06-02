@@ -11,7 +11,7 @@ public class CalendarConsole {
 		String days[] = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
 		Scanner sc= new Scanner (System.in);
 
-		System.out.println("Enter the month(0-11)");
+		System.out.println("Enter the month(1-12)");
 		int month = sc.nextInt();
 		month=month-1;
 		sc.nextLine();
