@@ -13,17 +13,18 @@ public class CalendarConsole {
 
 		System.out.println("Enter the month(0-11)");
 		int month = sc.nextInt();
+		month=month-1;
 		sc.nextLine();
 
 		System.out.println("Enter the year ");
 		int year = sc.nextInt();
 
 
-		
+
 		System.out.println("\t\t "+months[month]+" "+year);
-        
+
 		System.out.print(" ");
-		
+
 		for (int i=0;i<7;i++){
 
 			System.out.print(days[i]+"   ");
@@ -34,18 +35,18 @@ public class CalendarConsole {
 		GregorianCalendar gc = new GregorianCalendar(year,month,1);
 
 		System.out.println(" ");
-		
+
 
 		int firstDay=gc.get(Calendar.DAY_OF_WEEK); //first day of the month (1-7)
 
 
 
 		int no_days=dayMonth(gc.get(Calendar.MONTH)); //no of days in a given month
-		
+
 		System.out.print(spaces((firstDay-1)*6));
 		for (int i=1;i<=no_days;i++){
-			
-			
+
+
 
 			if (i<10){
 
@@ -57,13 +58,13 @@ public class CalendarConsole {
 
 			else 
 
-				{
-					System.out.print(" ");
-					System.out.print(i);
-					System.out.print("   ");
+			{
+				System.out.print(" ");
+				System.out.print(i);
+				System.out.print("   ");
 
-				}
-			
+			}
+
 
 
 			if ((firstDay+i-1)%7==0){
@@ -76,10 +77,10 @@ public class CalendarConsole {
 
 
 		}
-		
-		
+
+
 	}
-    //this method returns the no of days in a month passed in
+	//this method returns the no of days in a month passed in
 	public static int dayMonth(int monthh){
 
 		int month=monthh;
@@ -113,23 +114,23 @@ public class CalendarConsole {
 
 
 	}
-	
-	
+
+
 	//this method was made for formatting the spaces to print the calendar properly
 	public static String spaces(int num){
-		
+
 		int size=num;
-		
+
 		String arr= "";
-		
+
 		for (int i=1;i<=num;i++){
-			
+
 			arr=arr+ " ";
-			
-			
-	}
+
+
+		}
 		return arr;
-}
+	}
 
 }
 
